@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="mycss.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Tic-Tac-Toe</h1>
+        <div id="gameInstructions" class="instructions">To begin, click a box.</div>
+        <div id="tictactoe" class="neon-board">
+            <div class="row">
+                <div class="cell" data-indicator="1"></div>
+                <div class="cell" data-indicator="2"></div>
+                <div class="cell" data-indicator="4"></div>
+            </div>
+            <div class="row">
+                <div class="cell" data-indicator="8"></div>
+                <div class="cell" data-indicator="16"></div>
+                <div class="cell" data-indicator="32"></div>
+            </div>
+            <div class="row">
+                <div class="cell" data-indicator="64"></div>
+                <div class="cell" data-indicator="128"></div>
+                <div class="cell" data-indicator="256"></div>
+            </div>
+            <div class="win-line" style="top: 50%;"></div> 
+        </div>
+        <div id="winnerModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <p id="winnerMessage"></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="myjs.js"></script>
+</body>
+</html>

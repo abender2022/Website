@@ -1,0 +1,167 @@
+.neon-board {
+  background-color: #000;
+  padding: 60px;
+  border-radius: 10px;
+}
+.row {
+  display: flex;
+}
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #fffa;
+  margin: 5px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #fff;
+  text-shadow: 0 0 5px #ff0, 0 0 10px #ff0, 0 0 20px #ff0, 0 0 40px #f0f, 0 0 80px #f0f, 0 0 90px #f0f, 0 0 100px #f0f, 0 0 150px #f0f;
+}
+.cell.x {
+  color: #ed2b2b; 
+  text-shadow: 0 0 5px #f00, 0 0 15px #f00, 0 0 30px #f00;
+  font-size: 48;
+}
+
+.cell.o {
+  color: #a211d6; 
+  text-shadow: 0 0 5px #00f, 0 0 15px #00f, 0 0 30px #00f;
+  font-size: 48;
+}
+
+
+.win-line {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+  z-index: 100;
+}
+
+/* Horizontal win lines */
+.horizontal-line-1 {
+  top: 17%; /* Adjust based on your cells' layout */
+  left: 0;
+  width: 100%;
+  height: 5px;
+}
+
+.horizontal-line-2 {
+  top: 50%; /* Center row adjustment */
+}
+
+.horizontal-line-3 {
+  top: 83%; /* Bottom row adjustment */
+}
+
+/* Vertical win lines */
+.vertical-line-1 {
+  top: 0;
+  left: 17%; /* First column */
+  width: 5px;
+  height: 100%;
+}
+
+.vertical-line-2 {
+  top: 0;
+  left: 50%; /* Second column */
+  width: 5px;
+  height: 100%;
+}
+
+.vertical-line-3 {
+  top: 0;
+  left: 83%; /* Third column */
+  width: 5px;
+  height: 100%;
+}
+
+/* Diagonal win lines */
+.diagonal-line-6 {
+  top: 0;
+  transform: rotate(45deg);
+  width: 150%;
+}
+
+.diagonal-line-7 {
+  top: 0;
+  transform: rotate(-45deg);
+  width: 150%;
+}
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fff;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3.5em;
+    text-shadow: 0 0 5px #990F4B, 0 0 15px #990F4B, 0 0 30px #990F4B, 0 0 40px black, 0 0 80px black;
+}
+
+.neon-board {
+    background-color: #000;
+    padding: 60px;
+    border-radius: 10px;
+    margin-top: 20px;
+    position: relative;
+}
+
+body {
+    background-color: #000; /* Set background color to black */
+    color: #fff; /* Optional: Change the text color to white for contrast */
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: black;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    font-size: 48px;
+    text-shadow: 0 0 5px #990F4B, 0 0 15px #990F4B, 0 0 30px #990F4B, 0 0 40px black, 0 0 80px black;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.instructions {
+    color: #fff; /* White color for visibility against the black background */
+    text-align: center;
+    margin: 10px 0; /* Spacing for aesthetics */
+    font-size: 18px; /* Adjust size as necessary */
+}
+
+
